@@ -1,1 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngwambu Munini - Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing" class="page active">
+        <div class="landing-container">
+            <h1 class="landing-title">Ngwambu Munini</h1>
+            <p class="landing-subtitle">BIT 202 Assignment</p>
+            <div class="button-group">
+                <button class="task-btn" onclick="showTask(1)">Task 1</button>
+                <button class="task-btn" onclick="showTask(2)">Task 2</button>
+            </div>
+            <p class="landing-note">Select a task to begin</p>
+        </div>
+    </div>
+
+    <!-- TASK 1: Personal Website -->
+    <div id="task1" class="page">
+        <!-- Top Menu -->
+        <nav class="menu top-menu">
+            <a href="#" onclick="showSection('home'); return false;">Home</a>
+            <a href="#" onclick="showSection('experience'); return false;">Personal experience</a>
+            <a href="#" onclick="showSection('contacts'); return false;">Contacts</a>
+            <a href="#" onclick="showSection('hobbies'); return false;">Hobbies</a>
+            <a href="#" onclick="showLanding(); return false;" class="back-link">← Back to Tasks</a>
+        </nav>
+
+        <!-- Animated Name -->
+        <div class="name-banner">
+            <div class="marquee">
+                <span>Ngwambu Munini</span>
+            </div>
+        </div>
+
+        <!-- Home Section -->
+        <section id="home" class="content-section active-section">
+            <div class="home-content">
+                <img src="photo.jpg" alt="Ngwambu Munini" class="profile-photo">
+                <hr class="photo-hr">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! My name is <strong>Ngwambu Munini</strong>.</p>
+                    <p>I am currently pursuing a course in <strong>BIT (Bachelor of Information Technology)</strong>.</p>
+                    <p>I come from a background that values education, hard work, and continuous learning. Growing up, I developed a strong interest in technology and how it shapes the world around us.</p>
+                    <p>My academic journey has equipped me with foundational knowledge in computing, programming, networking, and information systems.</p>
+                    <p>After completing my course, I hope to work as a software developer or IT specialist, contributing to innovative solutions that solve real-world problems. I am passionate about building user-friendly applications and exploring emerging technologies such as artificial intelligence and web development.</p>
+                    <p>In my free time, I enjoy learning new skills, collaborating with peers, and staying updated with the latest tech trends.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Experience Section -->
+        <section id="experience" class="content-section">
+            <h2>Personal Experience - Curriculum Vitae</h2>
+            <table class="cv-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Institutions attended</th>
+                        <th>Awards given</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2018 - 2021</td>
+                        <td>Secondary School</td>
+                        <td>Kenya Certificate of Secondary Education (KCSE)</td>
+                    </tr>
+                    <tr>
+                        <td>2022 - Present</td>
+                        <td>University / College</td>
+                        <td>Pursuing Bachelor of Information Technology (BIT)</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Online Learning Platforms</td>
+                        <td>Certificate in Web Development Fundamentals</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>Internal Training</td>
+                        <td>Best Student Project Award - Web Design</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contacts Section -->
+        <section id="contacts" class="content-section">
+            <h2>Contacts</h2>
+            <div class="contact-info">
+                <p><strong>Name:</strong> Ngwambu Munini</p>
+                <p><strong>Email:</strong> ngwambu.munini@example.com</p>
+                <p><strong>Phone:</strong> +254 7XX XXX XXX</p>
+                <p><strong>Location:</strong> Kenya</p>
+                <p><a href="mailto:ngwambu.munini@example.com" class="email-link">Email me</a></p>
+            </div>
+            <hr class="section-hr">
+
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Enter your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail address*:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Message Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Enter your Message*:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="copy" name="copy">
+                    <label for="copy">E-mail a copy of this message to your own address.</label>
+                </div>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="content-section hobbies-page">
+            <h2>My Hobbies</h2>
+            <h3>I. Ordered List</h3>
+            <ol>
+                <li>Coding and building web applications</li>
+                <li>Reading technology blogs and books</li>
+                <li>Playing football and outdoor sports</li>
+                <li>Listening to music and podcasts</li>
+                <li>Photography and editing</li>
+            </ol>
+            <h3>II. Unordered List</h3>
+            <ul>
+                <li>Traveling and exploring new places</li>
+                <li>Learning new programming languages</li>
+                <li>Watching tech documentaries</li>
+                <li>Cooking traditional dishes</li>
+                <li>Volunteering in community tech workshops</li>
+            </ul>
+        </section>
+
+        <!-- Bottom Menu -->
+        <nav class="menu bottom-menu">
+            <a href="#" onclick="showSection('home'); return false;">Home</a>
+            <a href="#" onclick="showSection('experience'); return false;">Personal experience</a>
+            <a href="#" onclick="showSection('contacts'); return false;">Contacts</a>
+            <a href="#" onclick="showSection('hobbies'); return false;">Hobbies</a>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Ngwambu Munini. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- TASK 2: Tech Stock Table + Form -->
+    <div id="task2" class="page">
+        <div class="task2-header">
+            <button class="back-btn" onclick="showLanding()">← Back to Tasks</button>
+            <h1>Task 2</h1>
+        </div>
+
+        <!-- Part 1: Tech Stock Table -->
+        <div class="table-container">
+            <table class="tech-table">
+                <caption>My tech stock pick</caption>
+                <thead>
+                    <tr>
+                        <th class="header-name">Name</th>
+                        <th class="header-symbol">Symbol</th>
+                        <th class="header-images">Images</th>
+                        <th class="header-contact">Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Microsoft</td>
+                        <td>MSFT</td>
+                        <td class="img-cell">
+                            <img src="/assets/laptop.jpg" alt="Microsoft Logo" class="stock-img" onerror="this.src='https://via.placeholder.com/120x80?text=Microsoft'">
+                        </td>
+                        <td class="contact-cell">
+                            <ul>
+                                <li>Email: microsoft@mc.se</li>
+                                <li>©2013 Microsoft Corporation</li>
+                            </ul>
+                            <ol>
+                                <li>Email: microsoft@mc.se</li>
+                                <li>©2026 Microsoft Corporation</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cisco Systems</td>
+                        <td>CSCO</td>
+                        <td class="img-cell">
+                            <img src="assets/switch.jpg" alt="Cisco Logo" class="stock-img" onerror="this.src='https://via.placeholder.com/120x80?text=Cisco'">
+                        </td>
+                        <td class="contact-cell">
+                            <p><strong>Switch</strong></p>
+                            <a href="https://www.uk.hardware.info" target="_blank">www.uk.hardware.info</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="footer-cell">©BIT 202</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Part 2: Registration Form -->
+        <div class="form-container">
+            <h2 class="form-title">Step 1 of 5</h2>
+            <div class="registration-form">
+                <fieldset class="personal-info">
+                    <legend>Personal Information</legend>
+                    <div class="form-row">
+                        <label>Sur Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                        <label>First Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                        <label>Other Names</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="male"> Male</label>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Marital Status</label>
+                        <select>
+                            <option>Select - Status</option>
+                            <option>Single</option>
+                            <option>Married</option>
+                            <option>Divorced</option>
+                            <option>Widowed</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>Date of Birth</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                        <label>Place of Birth</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                        <label>Mothers Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                        <label>fathers Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                        <label>number of Dependants</label>
+                        <select>
+                            <option>Select - No of Dependants</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4+</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>level of Education</label>
+                        <input type="text">
+                    </div>
+                </fieldset>
+
+                <fieldset class="security-info">
+                    <legend>Security Information</legend>
+                    <div class="form-row">
+                        <label>UserName</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-row">
+                        <label>Password</label>
+                        <input type="password">
+                    </div>
+                    <div class="form-row">
+                        <label>Re-type Password</label>
+                        <input type="password">
+                    </div>
+                    <div class="form-row">
+                        <label>Security Question</label>
+                        <select>
+                            <option>Select - Question</option>
+                            <option>What is your pet's name?</option>
+                            <option>What is your mother's maiden name?</option>
+                            <option>What city were you born in?</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>Answer</label>
+                        <input type="text">
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+            </div>
+            <div class="form-footer">
+                Copyright © 2011 all rights reserved
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLanding() {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('landing').classList.add('active');
+        }
+
+        function showTask(num) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('task' + num).classList.add('active');
+            if (num === 1) {
+                showSection('home');
+            }
+        }
+
+        function showSection(id) {
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active-section'));
+            document.getElementById(id).classList.add('active-section');
+            // Scroll to top of content
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
 
